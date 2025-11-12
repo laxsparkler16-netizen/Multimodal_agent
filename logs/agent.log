@@ -1,0 +1,15 @@
+2025-11-12 07:07:42,914 INFO mode=caption
+2025-11-12 07:07:42,915 INFO caption=a pie chart showing the percentage of employees
+2025-11-12 07:08:33,999 INFO mode=caption
+2025-11-12 07:08:34,000 INFO caption=a pie chart showing the percentage of employees
+2025-11-12 07:08:56,394 INFO mode=caption
+2025-11-12 07:08:56,395 INFO caption=a pie chart showing the percentage of employees
+2025-11-12 07:09:34,228 INFO mode=vqa
+2025-11-12 07:09:34,228 INFO caption=a pie chart showing the percentage of employees
+2025-11-12 07:09:34,228 INFO question= give me stats of finance
+ answer=yes
+2025-11-12 07:09:58,366 INFO mode=vqa
+2025-11-12 07:09:58,366 INFO caption=a pie chart showing the percentage of employees
+2025-11-12 07:09:58,366 INFO question=give the stats of finance answer=yes
+2025-11-12 07:10:38,775 INFO mode=caption
+2025-11-12 07:10:38,775 INFO caption=the ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta ta
