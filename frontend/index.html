@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-language voice input to Indian language translation app">
+    <title>Voice Translation App</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎤 Voice Translation</h1>
+            <p class="subtitle">Real speech recognition & translation • No API key needed</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="card input-section">
+                <h2>🎙️ Record Your Voice</h2>
+                
+                <!-- Input Language Selection -->
+                <div class="form-group">
+                    <label for="inputLanguage" class="form-label">
+                        Select Spoken Language
+                    </label>
+                    <select 
+                        id="inputLanguage" 
+                        class="form-select"
+                        aria-label="Select the language you will speak"
+                    >
+                        <option value="">-- Choose Language --</option>
+                        <option value="en-US">English (US)</option>
+                        <option value="hi-IN">Hindi (हिन्दी)</option>
+                        <option value="ta-IN">Tamil (தமிழ்)</option>
+                        <option value="te-IN">Telugu (తెలుగు)</option>
+                        <option value="kn-IN">Kannada (ಕನ್ನಡ)</option>
+                        <option value="ml-IN">Malayalam (മലയാളം)</option>
+                        <option value="bn-IN">Bengali (বাংলা)</option>
+                        <option value="mr-IN">Marathi (मराठी)</option>
+                    </select>
+                </div>
+
+                <!-- Recording Controls -->
+                <div class="recording-controls">
+                    <button 
+                        id="recordBtn" 
+                        class="btn btn-primary btn-record"
+                        aria-label="Start recording"
+                        disabled
+                    >
+                        <span class="btn-icon">🎙️</span>
+                        <span class="btn-text">Start Recording</span>
+                    </button>
+                    
+                    <button 
+                        id="stopBtn" 
+                        class="btn btn-danger btn-stop"
+                        aria-label="Stop recording"
+                        style="display: none;"
+                    >
+                        <span class="btn-icon">⏹️</span>
+                        <span class="btn-text">Stop Recording</span>
+                    </button>
+                </div>
+
+                <!-- Recording Indicator -->
+                <div id="recordingIndicator" class="recording-indicator" style="display: none;">
+                    <span class="pulse-dot"></span>
+                    <span class="recording-text">Recording in progress...</span>
+                </div>
+
+                <!-- Transcription Display -->
+                <div class="form-group">
+                    <label for="transcriptionText" class="form-label">
+                        Recognized / Typed Text
+                    </label>
+                    <textarea 
+                        id="transcriptionText" 
+                        class="form-textarea"
+                        placeholder="Your transcribed or typed text will appear here..."
+                        aria-label="Transcribed or typed text"
+                    ></textarea>
+                </div>
+            </section>
+
+            <!-- Translation Section -->
+            <section class="card translation-section">
+                <h2>🌐 Translate</h2>
+                
+                <!-- Target Language Selection -->
+                <div class="form-group">
+                    <label for="targetLanguage" class="form-label">
+                        Select Target Language
+                    </label>
+                    <select 
+                        id="targetLanguage" 
+                        class="form-select"
+                        aria-label="Select the language to translate to"
+                    >
+                        <option value="">-- Choose Language --</option>
+                        <option value="en">English</option>
+                        <option value="hi">Hindi (हिन्दी)</option>
+                        <option value="ta">Tamil (தமிழ்)</option>
+                        <option value="te">Telugu (తెలుగు)</option>
+                        <option value="ml">Malayalam (മലയാളം)</option>
+                        <option value="kn">Kannada (ಕನ್ನಡ)</option>
+                        <option value="mr">Marathi (मराठी)</option>
+                        <option value="bn">Bengali (বাংলা)</option>
+                        <option value="or">Odia (ଓଡ଼ିଆ)</option>
+                    </select>
+                </div>
+
+                <!-- Translate Button -->
+                <div class="translate-controls">
+                    <button 
+                        id="translateBtn" 
+                        class="btn btn-secondary btn-translate"
+                        aria-label="Translate text"
+                        disabled
+                    >
+                        <span class="btn-icon">🌐</span>
+                        <span class="btn-text">Translate</span>
+                    </button>
+                </div>
+
+                <!-- Translation Output -->
+                <div class="form-group">
+                    <label for="translationText" class="form-label">
+                        Translated Text
+                    </label>
+                    <textarea 
+                        id="translationText" 
+                        class="form-textarea"
+                        placeholder="Translation will appear here..."
+                        readonly
+                        aria-label="Translated text in target language"
+                    ></textarea>
+                </div>
+
+                <!-- Play Translation Button -->
+                <div class="play-controls" style="margin-top: 15px; text-align: right;">
+                    <button 
+                        id="playBtn" 
+                        class="btn btn-primary"
+                        aria-label="Play translated text"
+                        disabled
+                    >
+                        <span class="btn-icon">🔊</span>
+                        <span class="btn-text">Listen</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Status Messages -->
+            <div id="statusMessage" class="status-message" style="display: none;" role="alert">
+                <span id="statusText"></span>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by AWS Kiro AI Services</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/app.js?v=4"></script>
+</body>
+</html>
