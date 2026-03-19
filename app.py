@@ -3,7 +3,7 @@ from PIL import Image
 from agent import MultimodalAgent
 
 agent = MultimodalAgent()
-
+#making changes
 
 def infer(image: Image.Image, prompt: str):
     if image is None:
